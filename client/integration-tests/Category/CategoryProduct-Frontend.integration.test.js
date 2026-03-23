@@ -4,10 +4,10 @@ import React from "react";
 import { render, screen, within, fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter, Routes, Route, useLocation } from "react-router-dom";
 import axios from "axios";
-import CategoryProduct from "../pages/CategoryProduct";
-import { AuthProvider } from "../context/auth";
-import { CartProvider } from "../context/cart";
-import { SearchProvider } from "../context/search";
+import CategoryProduct from "../../src/pages/CategoryProduct";
+import { AuthProvider } from "../../src/context/auth";
+import { CartProvider } from "../../src/context/cart";
+import { SearchProvider } from "../../src/context/search";
 
 jest.mock("axios");
 

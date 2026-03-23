@@ -64,7 +64,6 @@ test.describe("Category Creation", () => {
         await expect(page.getByRole('heading', { name: 'Category - CreateTestCategory' })).toBeVisible();
     });
 
-
     test('should show error for empty category name', async ({ page }) => {
         // Navigate to create category page
         await page.getByRole('button', { name: adminName }).click();

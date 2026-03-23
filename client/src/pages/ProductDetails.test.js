@@ -23,6 +23,10 @@ jest.mock("./../components/Layout", () => ({ children }) => (
   <div data-testid="layout">{children}</div>
 ));
 
+jest.mock("../context/cart", () => ({
+  useCart: jest.fn(() => [[], jest.fn()]),
+}));
+
 beforeEach(() => {
   jest.clearAllMocks();
   jest.spyOn(console, "log").mockImplementation(() => {});

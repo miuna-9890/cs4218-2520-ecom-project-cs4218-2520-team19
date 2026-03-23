@@ -127,7 +127,7 @@ describe('Login Component', () => {
       });
     });
 
-    it('should set local storage on successful login', async () => {
+    it('should set auth into local storage on successful login', async () => {
       const res = {
         data: {
             success: true,
@@ -143,7 +143,10 @@ describe('Login Component', () => {
       fireEvent.click(screen.getByText('LOGIN'));
 
       await waitFor(() => expect(axios.post).toHaveBeenCalled());
-      expect(mockSetItem).toHaveBeenCalledWith('auth', '{"success":true,"message":"Login Successful","user":{"id":1,"name":"John Doe","email":"test@example.com"},"token":"mockToken"}');
+      expect(mockSetItem).toHaveBeenCalledWith('auth', JSON.stringify({
+        user: { id: 1, name: 'John Doe', email: 'test@example.com' },
+        token: 'mockToken'
+      }));
     });
     
     it('should navigate to home page after successful login', async () => {

@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "setup": "node testSeed.js",
     "server:test": "node -e \"import('./test-env-files/testServer.js').then(({ startTestServer }) => startTestServer())\"",
     "client": "npm start --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -13,7 +14,7 @@
     "test": "npm run test:backend && npm run test:frontend && npm run test:playwright && npm run test:playwright:isolated",
     "test:frontend": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.frontend.config.js",
     "test:backend": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.backend.config.js",
-    "test:playwright": "npx playwright test",
+    "test:playwright": "npm run setup && npx playwright test --ui",
     "test:playwright:isolated": "npx playwright test --config playwright.isolated.config.js"
   },
   "keywords": [],
@@ -48,6 +49,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "mongodb-memory-server": "^11.0.1",
+    "supertest": "^7.2.2",
     "sonarqube-scanner": "^4.3.5"
   }
 }

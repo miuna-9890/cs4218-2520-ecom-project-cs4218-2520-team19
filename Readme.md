@@ -41,7 +41,7 @@ https://github.com/cs4218/cs4218-2520-ecom-project-cs4218-2520-team19/actions/ru
 
 ---
 
-### Thanakorn Pawirunsiri
+### Pawirunsiri Thanakorn
 
 - **Product Features**
   - **Client related files (`/client/src`)**
@@ -88,6 +88,43 @@ https://github.com/cs4218/cs4218-2520-ecom-project-cs4218-2520-team19/actions/ru
     - `controllers/productController.js`
       - `braintreeTokenController`
       - `brainTreePaymentController`
+
+---
+
+## MS2 Workload Distribution
+
+### Teo Kim Han
+
+- **Integration Tests**
+  - Login, Register and ForgotPassword
+- **UI Tests**
+  - Cart-related
+  - Search-related
+  - Forgot password
+  - Restriction of admin-routes to non-admins
+
+---
+
+### Pawirunsiri Thanakorn
+
+- **Integration Tests**
+  - Product controllers, Product frontend pages
+- **UI Tests**
+  - Product-related
+  - Logout-related
+
+---
+
+### Sun Zhiyuan Felix
+
+- **Integration Tests**
+  - Frontend
+    - CreateCategory, Categories, CategoryProduct
+  - Backend
+    - Category Controller and Route
+- **UI Tests**
+  - Admin category CRUD
+  - User cannot checkout scenarios
 
 ## 1. Project Introduction
 
@@ -228,7 +265,7 @@ To begin unit testing with Jest in your project, follow these steps:
 
      ```bash
      npm run test:playwright:isolated
-     ```  
+     ```
 
    - **All the tests**
      ```bash

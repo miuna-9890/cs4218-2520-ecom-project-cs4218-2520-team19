@@ -4,10 +4,10 @@ import React from "react";
 import { render, screen, within, fireEvent, waitFor, act } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import axios from "axios";
-import CreateCategory from "../pages/admin/CreateCategory";
-import { AuthProvider } from "../context/auth";
-import { CartProvider } from "../context/cart";
-import { SearchProvider } from "../context/search";
+import CreateCategory from "../../src/pages/admin/CreateCategory";
+import { AuthProvider } from "../../src/context/auth";
+import { CartProvider } from "../../src/context/cart";
+import { SearchProvider } from "../../src/context/search";
 
 jest.mock("axios");
 jest.mock("react-hot-toast");

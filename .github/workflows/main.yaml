@@ -42,14 +42,12 @@ jobs:
       # Run backend tests
       - name: Run backend tests
         run: npm run test:backend
+        env:
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
       # Run frontend tests
       - name: Run frontend tests
         run: npm run test:frontend
-
-      # Run Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright test
 
       # Run Playwright tests in isolated environment
       - name: Run Playwright tests in isolated environment
